@@ -17,9 +17,9 @@ class SummaryPage extends React.Component {
         <h1>Summary page</h1>
         <div className="whiteBox">
           <h3>Campaign model</h3>
-          <h4>{this.props.campaign}</h4>
+          <h4 className="light">{this.props.campaign}</h4>
           <h3>Daily Budget</h3>
-          <h4>{this.props.budget}</h4>
+          <h4 className="light">{this.props.budget}</h4>
         </div>
         <div className="buttonContainer2">
           <button className="startButton" onClick={this.handleSubmit2} type="submit">Continue</button>
