@@ -20,6 +20,7 @@ body {
 .buttonContainer {
   display: flex;
   align-items: center;
+  margin-bottom: 250px;
 }
 
 .startButton{
@@ -32,6 +33,7 @@ body {
   border-radius: 5px;
   /* padding: 10px; */
   margin-left: 150px;
+
 }
 
 
@@ -80,8 +82,8 @@ p{
 }
 
 .question2Container {
-  margin-top: 200px;
-  margin-bottom: 100px;
+  margin-top: 130px;
+  margin-bottom: 200px;
 }
 
 h4, h5 {
@@ -90,7 +92,7 @@ h4, h5 {
 
 .sticky {
   background: #f7f5fae8;
-  height: 100px;
+  height: 80px;
   position: fixed;
   top: 0;
   left: 0;
@@ -100,7 +102,7 @@ h4, h5 {
 
 .stickyBottom {
   background: #f7f5fae8;
-  height: 100px;
+  height: 80px;
   position: fixed;
   bottom: 0;
   left: 0;

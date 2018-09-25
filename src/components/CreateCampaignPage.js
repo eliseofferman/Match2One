@@ -1,17 +1,17 @@
 import React from "react"
 
+
 class CreateCampaignPage extends React.Component {
 
   constructor(props) {
-    super(props);
-
+    super(props)
     this.state = {
       selectedQ1: null,
-      option1Q2:null,
-      option2Q2:null,
-      option3Q2:null,
-      recTextQ2:null,
-      selectedQ2:null,
+      option1Q2: null,
+      option2Q2: null,
+      option3Q2: null,
+      recTextQ2: null,
+      selectedQ2: null
     }
   }
   componentDidMount() {
@@ -55,7 +55,7 @@ class CreateCampaignPage extends React.Component {
 
         {/* second question */}
         {this.state.selectedQ1 === null ? null: (
-          <div className="question2Container">
+          <div className="question2Container" >
             <h1>How much daily budget do you want to use?</h1>
             <h4>{this.state.recTextQ2}</h4>
             <div className={this.state.selectedQ2 === "A" ? 'question2BoxSelected': 'question2Box'} onClick={e => this.select2("A")}>
@@ -74,7 +74,6 @@ class CreateCampaignPage extends React.Component {
         )}
 
         {/* Submission */}
-
         {this.state.selectedQ2 === null ? null : (
           <div>
             <hr/>
@@ -116,12 +115,16 @@ class CreateCampaignPage extends React.Component {
         recTextQ2:"💡Recommendation. For a combination campaign, we recommend a minimum of $50",
       })
     }
+    if (letter === "A" || letter === "B" || letter === "C") {
+      window.scrollTo(0, 450)
+    }
   }
 
   select2 = value => {
+    const letter = value.toUpperCase()
     if (this.state.selectedQ1) {
       console.log(value)
-      const letter = value.toUpperCase()
+
       console.log(letter)
       if (letter === "A") {
         this.setState({
@@ -136,6 +139,9 @@ class CreateCampaignPage extends React.Component {
           selectedQ2: letter,
         })
       }
+    }
+    if (letter === "A" || letter === "B" || letter === "C") {
+      window.scrollTo(0, 1000)
     }
   }
 

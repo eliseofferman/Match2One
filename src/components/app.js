@@ -4,6 +4,10 @@ import StartPage from "./StartPage.js"
 import SummaryPage from "./SummaryPage.js"
 import CreateCampaignPage from "./CreateCampaignPage.js"
 
+import ReallySmoothScroll from "really-smooth-scroll"
+
+ReallySmoothScroll.shim();
+
 class App extends React.Component {
 
   render() {
