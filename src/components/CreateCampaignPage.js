@@ -20,6 +20,7 @@ class CreateCampaignPage extends React.Component {
 
       alert('keypress event\n\n' + 'key: ' + keyName);
       this.select1(keyName)
+      this.select2(keyName)
     })
   }
 
@@ -55,20 +56,34 @@ class CreateCampaignPage extends React.Component {
           <div className="question2Container">
             <h1>How much daily budget do you want to use?</h1>
             <h4>{this.state.recTextQ2}</h4>
-            <div className={this.state.selectedQ2 === "A" ? 'question2BoxSelected': 'question2Box'} onClick={e => this.select1("A")}>
+            <div className={this.state.selectedQ2 === "A" ? 'question2BoxSelected': 'question2Box'} onClick={e => this.select2("A")}>
               <h4>{this.state.option1Q2}</h4>
               <h5>Press A</h5>
             </div>
-            <div className={this.state.selectedQ2 === "A" ? 'question2BoxSelected': 'question2Box'} onClick={e => this.select1("B")}>
+            <div className={this.state.selectedQ2 === "B" ? 'question2BoxSelected': 'question2Box'} onClick={e => this.select2("B")}>
               <h4>{this.state.option2Q2}</h4>
               <h5>Press B</h5>
             </div>
-            <div className={this.state.selectedQ2 === "A" ? 'question2BoxSelected': 'question2Box'} onClick={e => this.select1("C")}>
+            <div className={this.state.selectedQ2 === "C" ? 'question2BoxSelected': 'question2Box'} onClick={e => this.select2("C")}>
               <h4>{this.state.option3Q2}</h4>
               <h5>Press C</h5>
             </div>
           </div>
         )}
+
+        {/* Submission */}
+
+        {this.state.selectedQ2 === null ? null : (
+
+          <div>
+            <hr/>
+            <div className="buttonContainer">
+              <button className="startButton"onClick={this.handleSubmit2} type="submit">Continue to summery</button>
+              <p>press ENTER </p>
+            </div>
+          </div>
+        )}
+
       </div>
     )
   }
@@ -100,7 +115,27 @@ class CreateCampaignPage extends React.Component {
         recTextQ2:"💡Recommendation. For a combination campaign, we recommend a minimum of $50",
       })
     }
+  }
 
+  select2 = value => {
+    if (this.state.selectedQ1) {
+      console.log(value)
+      const letter = value.toUpperCase()
+      console.log(letter)
+      if (letter === "A") {
+        this.setState({
+          selectedQ2: letter,
+        })
+      } else if (letter === "B") {
+        this.setState({
+          selectedQ2: letter,
+        })
+      } else if (letter === "C") {
+        this.setState({
+          selectedQ2: letter,
+        })
+      }
+    }
   }
 
 }
