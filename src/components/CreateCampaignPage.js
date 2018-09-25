@@ -188,9 +188,11 @@ class CreateCampaignPage extends React.Component {
   }
 
   handleSubmit2 = keyName => {
-    if (keyName === "Enter") {
-      this.props.setBudget(this.state.budget, this.state.campaign)
-      this.props.history.push("/Summary")
+    if (this.state.selectedQ1 && this.state.selectedQ2) {
+      if (keyName === "Enter") {
+        this.props.setBudget(this.state.budget, this.state.campaign)
+        this.props.history.push("/Summary")
+      }
     }
   }
 
