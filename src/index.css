@@ -39,7 +39,7 @@ p{
   margin-left: 20px;
 }
 
-.question1Container{
+.questionsContainer{
   padding: 70px;
 }
 
@@ -54,10 +54,37 @@ p{
   background-color: #dddae5;
 }
 
+.question2Box {
+  width: 200px;
+  padding: 20px;
+  /* height: 100px; */
+  background-color: #eceaf2;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+.question2BoxSelected {
+  width: 200px;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  background-color: #dddae5;
+}
+
 .boxContainer{
   display:grid;
   grid-template-columns: 1fr 1fr 1fr;
 	grid-gap: 30px;
+  margin-top: 20px;
+}
+
+.question2Container {
+  margin-top: 200px;
+}
+
+h4, h5 {
+  margin: 0;
 }
 
 
