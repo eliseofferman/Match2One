@@ -150,4 +150,43 @@ h4, h5 {
 .light{
   font-weight: lighter;
 }
-/* #dddae5 */
+
+.coolbox {
+    background:#cac7d2;
+    border-radius: 2px;
+    width:25px;
+    height:25px;
+    line-height:30px;
+    text-align:center;
+    vertical-align:middle;
+    font-weight:bold;
+    font-size:16px;
+    color: #5e4f84;
+    margin-left: 10px;
+}
+
+.coolboxSelected {
+  background: #5e4f84;
+  color: white;
+  border-radius: 2px;
+  width:25px;
+  height:25px;
+  line-height:30px;
+  text-align:center;
+  vertical-align:middle;
+  font-weight:bold;
+  font-size:16px;
+  margin-left: 10px;
+}
+
+.checked {
+  color: #5e4f84;
+  font-weight: lighter;
+  font-size: 16px;
+}
+
+.checkedBox {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
