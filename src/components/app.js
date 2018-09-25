@@ -10,20 +10,46 @@ ReallySmoothScroll.shim();
 
 class App extends React.Component {
 
+  constructor(props) {
+    super(props)
+    this.state = {
+      budget: null,
+      campaign: null
+    }
+  }
+
   render() {
     return (
       <BrowserRouter>
         <div>
           <Route exact path="/" component={StartPage} />
-          <Route exact path="/CreateCampaign" component={CreateCampaignPage} />
-          <Route exact path="/Summary" component={SummaryPage} />
-          {/* <StartPage />
-            <CreateCampaignPage />
-          <SummaryPage /> */}
+          <Route
+            path="/CreateCampaign"
+            render={routeProps => (
+              <CreateCampaignPage
+                setBudget={this.setBudget}
+                {...routeProps} />
+            )} />
 
+          <Route
+            path="/Summary"
+            render={routeProps => (
+              <SummaryPage
+                budget={this.state.budget}
+                campaign={this.state.campaign}
+                {...routeProps} />
+            )} />
+          {/* <Route exact path="/Summary" component={SummaryPage} /> */}
         </div>
       </BrowserRouter>
     )
+  }
+
+  setBudget = (b, c) => {
+    this.setState({
+      budget: b,
+      campaign: c
+    })
   }
 
 }

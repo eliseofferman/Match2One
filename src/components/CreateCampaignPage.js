@@ -11,7 +11,8 @@ class CreateCampaignPage extends React.Component {
       option2Q2: null,
       option3Q2: null,
       recTextQ2: null,
-      selectedQ2: null
+      selectedQ2: null,
+      campaign: null
     }
   }
   componentDidMount() {
@@ -37,18 +38,18 @@ class CreateCampaignPage extends React.Component {
             <div className={this.state.selectedQ1 === "A" ? 'question1BoxSelected': 'question1Box'} onClick={e => this.select1("A")}>
               <h3>New customers</h3>
               <h5>Target users that are likely to become new customers. This is called a prospecting campaign.</h5>
-              <p>Press A</p>
+              <h5>Press A</h5>
             </div>
             <div className={this.state.selectedQ1 === "B" ? 'question1BoxSelected': 'question1Box'} onClick={e => this.select1("B")}>
               <h3>Current website visitors</h3>
               <h5>Users that visited your website but left without buying. This is called a retargeting campaign.</h5>
-              <p>Press B</p>
+              <h5>Press B</h5>
             </div>
             <div className={this.state.selectedQ1 === "C" ? 'question1BoxSelected': 'question1Box'} onClick={e => this.select1("C")}>
               <h3>New customers & Current website visitors</h3>
               <h5>Use a combination of Prospecting and Retargeting to reach new users as well as current visitors.
               </h5>
-              <p>Press C</p>
+              <h5>Press C</h5>
             </div>
           </div>
         </div>
@@ -77,7 +78,7 @@ class CreateCampaignPage extends React.Component {
         {this.state.selectedQ2 === null ? null : (
           <div>
             <hr/>
-            <div className="buttonContainer">
+            <div className="buttonContainer2">
               <button className="startButton" onClick={this.handleSubmit} type="submit">Continue to summery</button>
               <p>press ENTER </p>
             </div>
@@ -97,6 +98,7 @@ class CreateCampaignPage extends React.Component {
         option2Q2:"$50",
         option3Q2:"$75",
         recTextQ2:"💡Recommendation. For a prospecting campaign, we recommend a minimum of $30",
+        campaign: "New customers"
       })
     } else if (letter === "B") {
       this.setState({
@@ -105,6 +107,7 @@ class CreateCampaignPage extends React.Component {
         option2Q2:"$30",
         option3Q2:"$50",
         recTextQ2:"💡Recommendation. For a retargeting campaign, we recommend a minimum of $15",
+        campaign: "Current website visitors"
       })
     } else if (letter === "C") {
       this.setState({
@@ -113,6 +116,7 @@ class CreateCampaignPage extends React.Component {
         option2Q2:"$75",
         option3Q2:"$100",
         recTextQ2:"💡Recommendation. For a combination campaign, we recommend a minimum of $50",
+        campaign: "New customers & Current website visitors"
       })
     }
     if (letter === "A" || letter === "B" || letter === "C") {
@@ -147,11 +151,13 @@ class CreateCampaignPage extends React.Component {
 
   handleSubmit= event => {
     event.preventDefault()
+    this.props.setBudget(this.state.selectedQ2, this.state.campaign)
     this.props.history.push("/Summary")
   }
 
   handleSubmit2 = keyName => {
     if (keyName === "Enter") {
+      this.props.setBudget(this.state.selectedQ2, this.state.campaign)
       this.props.history.push("/Summary")
     }
   }
