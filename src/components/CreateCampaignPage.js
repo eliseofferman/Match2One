@@ -45,18 +45,30 @@ class CreateCampaignPage extends React.Component {
             <div className={this.state.selectedQ1 === "A" ? 'question1BoxSelected': 'question1Box'} onClick={e => this.select1("A")}>
               <h3>New customers</h3>
               <h5>Target users that are likely to become new customers. This is called a prospecting campaign.</h5>
-              <h5 className="light" >press A</h5>
+              {/* checkbox */}
+              <div className="checkedBox">
+                <h5 className="checked" >{this.state.selectedQ1 === "A" ? "✓" : "press" }</h5>
+                <span className={this.state.selectedQ1 === "A" ? 'coolboxSelected': 'coolbox'}>A</span>
+              </div>
             </div>
             <div className={this.state.selectedQ1 === "B" ? 'question1BoxSelected': 'question1Box'} onClick={e => this.select1("B")}>
               <h3>Current website visitors</h3>
               <h5>Users that visited your website but left without buying. This is called a retargeting campaign.</h5>
-              <h5 className="light">press B</h5>
+              {/* checkbox */}
+              <div className="checkedBox">
+                <h5 className="checked" >{this.state.selectedQ1 === "B" ? "✓" : "press" }</h5>
+                <span className={this.state.selectedQ1 === "B" ? 'coolboxSelected': 'coolbox'}>B</span>
+              </div>
             </div>
             <div className={this.state.selectedQ1 === "C" ? 'question1BoxSelected': 'question1Box'} onClick={e => this.select1("C")}>
               <h3>New customers & Current website visitors</h3>
               <h5>Use a combination of Prospecting and Retargeting to reach new users as well as current visitors.
               </h5>
-              <h5 className="light">press C</h5>
+              {/* checkbox */}
+              <div className="checkedBox">
+                <h5 className="checked" >{this.state.selectedQ1 === "C" ? "✓" : "press" }</h5>
+                <span className={this.state.selectedQ1 === "C" ? 'coolboxSelected': 'coolbox'}>C</span>
+              </div>
             </div>
           </div>
         </div>
