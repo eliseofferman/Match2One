@@ -1,5 +1,5 @@
 import React from "react"
-import { BrowserRouter, Route } from "react-router-dom"
+import { HashRouter, Route } from "react-router-dom"
 import ReallySmoothScroll from "really-smooth-scroll"
 import StartPage from "./StartPage.js"
 import SummaryPage from "./SummaryPage.js"
@@ -19,7 +19,7 @@ class App extends React.Component {
 
   render() {
     return (
-      <BrowserRouter>
+      <HashRouter>
         <div>
           <Route exact path="/" component={StartPage} />
           <Route
@@ -39,7 +39,7 @@ class App extends React.Component {
                 {...routeProps} />
             )} />
         </div>
-      </BrowserRouter>
+      </HashRouter>
     )
   }
 
