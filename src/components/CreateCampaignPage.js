@@ -80,15 +80,27 @@ class CreateCampaignPage extends React.Component {
             <h4>{this.state.recTextQ2}</h4>
             <div className={this.state.selectedQ2 === "A" ? 'question2BoxSelected': 'question2Box'} onClick={e => this.select2("A")}>
               <h4>{this.state.option1Q2}</h4>
-              <h5 className="light">press A</h5>
+              {/* checkbox */}
+              <div className="checkedBox">
+                <h5 className="checked" >{this.state.selectedQ2 === "A" ? "✓" : "press" }</h5>
+                <span className={this.state.selectedQ2 === "A" ? 'coolboxSelected': 'coolbox'}>A</span>
+              </div>
             </div>
             <div className={this.state.selectedQ2 === "B" ? 'question2BoxSelected': 'question2Box'} onClick={e => this.select2("B")}>
               <h4>{this.state.option2Q2}</h4>
-              <h5 className="light">press B</h5>
+              {/* checkbox */}
+              <div className="checkedBox">
+                <h5 className="checked" >{this.state.selectedQ2 === "B" ? "✓" : "press" }</h5>
+                <span className={this.state.selectedQ2 === "B" ? 'coolboxSelected': 'coolbox'}>B</span>
+              </div>
             </div>
             <div className={this.state.selectedQ2 === "C" ? 'question2BoxSelected': 'question2Box'} onClick={e => this.select2("C")}>
               <h4>{this.state.option3Q2}</h4>
-              <h5 className="light">press C</h5>
+              {/* checkbox */}
+              <div className="checkedBox">
+                <h5 className="checked" >{this.state.selectedQ2 === "C" ? "✓" : "press" }</h5>
+                <span className={this.state.selectedQ2 === "C" ? 'coolboxSelected': 'coolbox'}>C</span>
+              </div>
             </div>
           </div>
         )}
