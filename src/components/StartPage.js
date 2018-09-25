@@ -12,8 +12,13 @@ class StartPage extends React.Component {
   }
   render() {
     return (
-      <div>
-        <button onClick={this.handleSubmit2} type="submit">Send</button>
+      <div className='startContainer'>
+        <h1>Welcome</h1>
+        <h3>Lets set up your first campaign</h3>
+        <div className='buttonContainer'>
+          <button className='startButton'onClick={this.handleSubmit2} type="submit">Start</button>
+          <p>press ENTER </p>
+        </div>
       </div>
     )
   }

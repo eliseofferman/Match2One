@@ -18,7 +18,7 @@ class App extends React.Component {
           <SummaryPage /> */}
 
         </div>
-        </BrowserRouter>
+      </BrowserRouter>
     )
   }
 
