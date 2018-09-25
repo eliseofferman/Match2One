@@ -28,6 +28,7 @@ class CreateCampaignPage extends React.Component {
   render() {
     return (
       <div className='questionsContainer'>
+        <div className="sticky"></div>
         {/* first question */}
         <div >
           <h1>What kind of users do you want to target?</h1>
@@ -83,7 +84,7 @@ class CreateCampaignPage extends React.Component {
             </div>
           </div>
         )}
-
+        <div className="stickyBottom"></div>
       </div>
     )
   }
