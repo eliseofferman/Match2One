@@ -1,12 +1,11 @@
 import React from "react"
-import { BrowserRouter, Route, Redirect} from "react-router-dom"
+import { BrowserRouter, Route } from "react-router-dom"
+import ReallySmoothScroll from "really-smooth-scroll"
 import StartPage from "./StartPage.js"
 import SummaryPage from "./SummaryPage.js"
 import CreateCampaignPage from "./CreateCampaignPage.js"
 
-import ReallySmoothScroll from "really-smooth-scroll"
-
-ReallySmoothScroll.shim();
+ReallySmoothScroll.shim()
 
 class App extends React.Component {
 
@@ -39,7 +38,6 @@ class App extends React.Component {
                 campaign={this.state.campaign}
                 {...routeProps} />
             )} />
-          {/* <Route exact path="/Summary" component={SummaryPage} /> */}
         </div>
       </BrowserRouter>
     )

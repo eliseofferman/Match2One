@@ -12,11 +12,11 @@ class StartPage extends React.Component {
   }
   render() {
     return (
-      <div className='startContainer'>
+      <div className="startContainer">
         <h1>Welcome</h1>
         <h3>Lets set up your first campaign</h3>
-        <div className='buttonContainer'>
-          <button className='startButton'onClick={this.handleSubmit2} type="submit">Start</button>
+        <div className="buttonContainer">
+          <button className="startButton" onClick={this.handleSubmit2} type="submit">Start</button>
           <p>press ENTER </p>
         </div>
       </div>
@@ -24,7 +24,6 @@ class StartPage extends React.Component {
   }
   handleSubmit2= event => {
     event.preventDefault()
-    console.log("hej2")
     this.props.history.push("/CreateCampaign")
   }
 

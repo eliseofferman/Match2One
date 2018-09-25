@@ -21,8 +21,8 @@ class SummaryPage extends React.Component {
           <h3>Daily Budget</h3>
           <h4>{this.props.budget}</h4>
         </div>
-        <div className='buttonContainer'>
-          <button className='startButton'onClick={this.handleSubmit2} type="submit">Continue</button>
+        <div className="buttonContainer2">
+          <button className="startButton" onClick={this.handleSubmit2} type="submit">Continue</button>
           <p>press ENTER </p>
         </div>
       </div>
@@ -31,7 +31,6 @@ class SummaryPage extends React.Component {
 
   handleSubmit2= event => {
     event.preventDefault()
-    console.log("hej2")
     this.props.history.push("/CreateCampaign")
   }
 
