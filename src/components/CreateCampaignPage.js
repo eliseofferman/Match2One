@@ -18,9 +18,10 @@ class CreateCampaignPage extends React.Component {
     document.addEventListener("keypress", event => {
       const keyName = event.key
 
-      alert('keypress event\n\n' + 'key: ' + keyName);
+      // alert('keypress event\n\n' + 'key: ' + keyName);
       this.select1(keyName)
       this.select2(keyName)
+      this.handleSubmit2(keyName)
     })
   }
 
@@ -74,11 +75,10 @@ class CreateCampaignPage extends React.Component {
         {/* Submission */}
 
         {this.state.selectedQ2 === null ? null : (
-
           <div>
             <hr/>
             <div className="buttonContainer">
-              <button className="startButton"onClick={this.handleSubmit2} type="submit">Continue to summery</button>
+              <button className="startButton" onClick={this.handleSubmit} type="submit">Continue to summery</button>
               <p>press ENTER </p>
             </div>
           </div>
@@ -135,6 +135,17 @@ class CreateCampaignPage extends React.Component {
           selectedQ2: letter,
         })
       }
+    }
+  }
+
+  handleSubmit= event => {
+    event.preventDefault()
+    this.props.history.push("/Summary")
+  }
+
+  handleSubmit2 = keyName => {
+    if (keyName === "Enter") {
+      this.props.history.push("/Summary")
     }
   }
 

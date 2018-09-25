@@ -31,10 +31,7 @@ class StartPage extends React.Component {
   handleSubmit = keyName => {
     // event.preventDefault();
     if (keyName === "Enter") {
-      console.log("enter press here! ", keyName)
       this.props.history.push("/CreateCampaign")
-    } else {
-      console.log("here! ", keyName)
     }
   }
 }
