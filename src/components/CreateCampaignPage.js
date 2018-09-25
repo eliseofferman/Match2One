@@ -38,18 +38,18 @@ class CreateCampaignPage extends React.Component {
             <div className={this.state.selectedQ1 === "A" ? 'question1BoxSelected': 'question1Box'} onClick={e => this.select1("A")}>
               <h3>New customers</h3>
               <h5>Target users that are likely to become new customers. This is called a prospecting campaign.</h5>
-              <h5>Press A</h5>
+              <h5 className="light" >press A</h5>
             </div>
             <div className={this.state.selectedQ1 === "B" ? 'question1BoxSelected': 'question1Box'} onClick={e => this.select1("B")}>
               <h3>Current website visitors</h3>
               <h5>Users that visited your website but left without buying. This is called a retargeting campaign.</h5>
-              <h5>Press B</h5>
+              <h5 className="light">press B</h5>
             </div>
             <div className={this.state.selectedQ1 === "C" ? 'question1BoxSelected': 'question1Box'} onClick={e => this.select1("C")}>
               <h3>New customers & Current website visitors</h3>
               <h5>Use a combination of Prospecting and Retargeting to reach new users as well as current visitors.
               </h5>
-              <h5>Press C</h5>
+              <h5 className="light">press C</h5>
             </div>
           </div>
         </div>
@@ -61,15 +61,15 @@ class CreateCampaignPage extends React.Component {
             <h4>{this.state.recTextQ2}</h4>
             <div className={this.state.selectedQ2 === "A" ? 'question2BoxSelected': 'question2Box'} onClick={e => this.select2("A")}>
               <h4>{this.state.option1Q2}</h4>
-              <h5>Press A</h5>
+              <h5 className="light">press A</h5>
             </div>
             <div className={this.state.selectedQ2 === "B" ? 'question2BoxSelected': 'question2Box'} onClick={e => this.select2("B")}>
               <h4>{this.state.option2Q2}</h4>
-              <h5>Press B</h5>
+              <h5 className="light">press B</h5>
             </div>
             <div className={this.state.selectedQ2 === "C" ? 'question2BoxSelected': 'question2Box'} onClick={e => this.select2("C")}>
               <h4>{this.state.option3Q2}</h4>
-              <h5>Press C</h5>
+              <h5 className="light">press C</h5>
             </div>
           </div>
         )}
