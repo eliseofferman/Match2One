@@ -128,15 +128,15 @@ class CreateCampaignPage extends React.Component {
       console.log(letter)
       if (letter === "A") {
         this.setState({
-          selectedQ2: letter,
+          selectedQ2: this.state.option1Q2,
         })
       } else if (letter === "B") {
         this.setState({
-          selectedQ2: letter,
+          selectedQ2: this.state.option2Q2,
         })
       } else if (letter === "C") {
         this.setState({
-          selectedQ2: letter,
+          selectedQ2: this.state.option3Q2,
         })
       }
     }
