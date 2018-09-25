@@ -183,7 +183,7 @@ class CreateCampaignPage extends React.Component {
 
   handleSubmit= event => {
     event.preventDefault()
-    this.props.setBudget(this.state.selectedQ2, this.state.campaign)
+    this.props.setBudget(this.state.budget, this.state.campaign)
     this.props.history.push("/Summary")
   }
 
